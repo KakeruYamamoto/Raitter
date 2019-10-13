@@ -25,6 +25,15 @@ class RaeetsController < ApplicationController
     @raeet = Raeet.find(params[:id])
   end
 
+  def update
+    @raeet = Raeet.find(params[:id])
+    if @raeet.update(raeet_params)
+      redirect_to raeets_path, notice: "Raeetしました！"
+    else
+      render :edit
+    end
+  end
+
   private
 
   def raeet_params
