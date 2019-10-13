@@ -5,13 +5,13 @@
     <th>CONTENT</th>
   </tr>
 
-<% @blogs.each do |blog| %>
+<% @raeets.each do |raeet| %>
   <tr>
-    <td><%= raeet.content %>(td)</td>
-    <td><%= link_to '詳細', blog_path(blog.id) %></td>
+    <td><%= raeet.content %></td>
+    <td><%= link_to '詳細', raeet_path(raeet.id) %></td>
 
   </tr>
 <% end %>
 </table>
 <br>
-<%= link_to '新しくブログを投稿する',new_blog_path %>
+<%= link_to '新しくブログを投稿する',new_raeet_path %>
