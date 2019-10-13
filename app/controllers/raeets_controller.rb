@@ -21,6 +21,10 @@ class RaeetsController < ApplicationController
     @raeet = Raeet.find(params[:id])
   end
 
+  def edit
+    @raeet = Raeet.find(params[:id])
+  end
+
   private
 
   def raeet_params
