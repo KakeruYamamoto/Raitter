@@ -6,4 +6,9 @@ class RaeetsController < ApplicationController
   def new
     @raeet = Raeet.new
   end
+
+  def create
+    
+
+  end
 end
