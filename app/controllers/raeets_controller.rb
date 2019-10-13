@@ -8,14 +8,14 @@ class RaeetsController < ApplicationController
     @raeet = Raeet.new
   end
 
-  # def create
-  #   Raeet.create(raeet_params)
-  #   redirect_to new_raeet_path
-  # end
-  #
-  # private
-  #
-  # def raeet_params
-  #   params.require(:raeet).permit(:content)
-  # end
+  def create
+    Raeet.create(raeet_params)
+    redirect_to new_raeet_path
+  end
+
+  private
+
+  def raeet_params
+    params.require(:raeet).permit(:content)
+  end
 end
