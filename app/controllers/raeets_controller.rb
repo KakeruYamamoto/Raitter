@@ -13,6 +13,10 @@ class RaeetsController < ApplicationController
     redirect_to new_raeet_path
   end
 
+  def show
+    @raeet = Raeet.find(params[:id])
+  end
+  
   private
 
   def raeet_params
