@@ -9,14 +9,18 @@ class RaeetsController < ApplicationController
   end
 
   def create
-    Raeet.create(raeet_params)
-    redirect_to new_raeet_path
+    @raeet = Raeet.new(raeet_params)
+    if @raeet.save
+      redirect_to raeets_path, notice:"Raeetしました！"
+    else
+      render :new
+    end
   end
 
   def show
     @raeet = Raeet.find(params[:id])
   end
-  
+
   private
 
   def raeet_params
