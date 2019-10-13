@@ -4,10 +4,10 @@ class RaeetsController < ApplicationController
     @raeets =  Raeet.all
   end
 
-  # def new
-  #   @raeet = Raeet.new
-  # end
-  #
+  def new
+    @raeet = Raeet.new
+  end
+
   # def create
   #   Raeet.create(raeet_params)
   #   redirect_to new_raeet_path
