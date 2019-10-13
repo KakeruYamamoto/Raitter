@@ -1,0 +1,2 @@
+class Raeet < ApplicationRecord
+end
