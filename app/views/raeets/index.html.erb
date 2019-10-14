@@ -1,18 +1,32 @@
-<h1>Raeet一覧だぜぇ〜</h1>
-<p><%= notice %></p>
-<table>
-  <tr>
-    <th>CONTENTだぜぇ〜</th>
-  </tr>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>RAITTER</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/sample.css">
+  </head>
 
-<% @raeets.each do |raeet| %>
-  <tr>
-    <td><%= raeet.content %></td>
-    <td><%= link_to '詳細だぜぇ', raeet_path(raeet.id) %></td>
-    <td><%= link_to '編集だぜぇ', edit_raeet_path(raeet.id), data: {confirm: '本当に編集するぜぇ〜？'} %></td>
-    <td><%= link_to '削除だぜぇ', raeet_path(raeet.id),method: :delete,data: { confirm: '本当に削除するぜぇ〜？'} %> </td>
-  </tr>
-<% end %>
-</table>
-<br>
-<%= link_to 'Raeetするぜぇ',new_raeet_path %>
+  <body class="body">
+    <section class="main">
+      <p><%= notice %></p>
+      <table>
+        <tr>
+          <th>CONTENTだぜぇ〜</th>
+        </tr>
+
+      <% @raeets.each do |raeet| %>
+        <tr>
+          <td><%= raeet.content %></td>
+          <td><%= link_to '詳細だぜぇ', raeet_path(raeet.id) %></td>
+          <td><%= link_to '編集だぜぇ', edit_raeet_path(raeet.id), data: {confirm: '本当に編集するぜぇ〜？'} %></td>
+          <td><%= link_to '削除だぜぇ', raeet_path(raeet.id),method: :delete,data: { confirm: '本当に削除するぜぇ〜？'} %> </td>
+        </tr>
+      <% end %>
+      </table>
+      <br>
+      <%= link_to 'Raeetするぜぇ',new_raeet_path %>
+    </section>
+  </body>
+</html>
