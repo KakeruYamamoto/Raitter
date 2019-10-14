@@ -1,4 +1,4 @@
-<%= form_with(model: @raeet, local: true) do |form| %>
+<%= form_with(model: @raeet, local: true,url: confirm_raeets_path) do |form| %>
   <% if @raeet.errors.any? %>
     <div id="error_explanation">
       <h2><%= @raeet.errors.count %>件のエラーがあるぜぇ〜</h2>
