@@ -41,7 +41,7 @@ class RaeetsController < ApplicationController
     end
 
     def confirm
-      @raeet = Raeet.new(raeet_path)
+      @raeet = Raeet.new(raeet_params)
       render :new if @raeet.invalid?
     end
 
