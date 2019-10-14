@@ -9,9 +9,10 @@
   <tr>
     <td><%= raeet.content %></td>
     <td><%= link_to '詳細', raeet_path(raeet.id) %></td>
-    <td><%= link_to '編集', edit_raeet_path(raeet.id) %></td>
+    <td><%= link_to '編集', edit_raeet_path(raeet.id), data: {confirm: '本当に編集するぜぇ？'} %></td>
+    <td><%= link_to '削除', raeet_path(raeet.id),method: :delete,data: { confirm: '本当に削除するぜえ？'} %> </td>
   </tr>
 <% end %>
 </table>
 <br>
-<%= link_to 'Raeetする',new_raeet_path %>
+<%= link_to 'Raeetするぜぇ',new_raeet_path %>

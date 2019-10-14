@@ -12,7 +12,7 @@ class RaeetsController < ApplicationController
   def create
     @raeet = Raeet.new(raeet_params)
     if @raeet.save
-      redirect_to raeets_path, notice:"Raeetしました！"
+      redirect_to raeets_path, notice:"Raeetしたぜぇ〜"
     else
       render :new
     end
@@ -26,9 +26,14 @@ class RaeetsController < ApplicationController
 
   def update
     if @raeet.update(raeet_params)
-      redirect_to raeets_path, notice: "Raeetしました！"
+      redirect_to raeets_path, notice: "Raeetしたぜぇ〜"
     else
       render :edit
+    end
+
+    def destroy
+      @raeet.destroy
+      redirect_to raeets_path, notice:"Raeetを削除したぜぇ〜"
     end
   end
 
