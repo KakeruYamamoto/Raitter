@@ -34,18 +34,19 @@ class RaeetsController < ApplicationController
     else
       render :edit
     end
-
-    def destroy
-      @raeet.destroy
-      redirect_to raeets_path, notice:"Raeetを削除したぜぇ〜"
-    end
-
-    def confirm
-      @raeet = Raeet.new(raeet_params)
-      render :new if @raeet.invalid?
-    end
-
   end
+
+  def destroy
+    @raeet.destroy
+    redirect_to raeets_path, notice:"Raeetを削除したぜぇ〜"
+  end
+
+  def confirm
+    @raeet = Raeet.new(raeet_params)
+    render :new if @raeet.invalid?
+  end
+
+
 
   private
 
