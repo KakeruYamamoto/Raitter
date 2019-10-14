@@ -35,6 +35,10 @@ class RaeetsController < ApplicationController
       @raeet.destroy
       redirect_to raeets_path, notice:"Raeetを削除したぜぇ〜"
     end
+
+    def confirm
+      @raeet = Raeet.new(raeet_path)
+    end
   end
 
   private
