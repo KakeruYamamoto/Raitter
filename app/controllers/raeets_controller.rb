@@ -11,10 +11,14 @@ class RaeetsController < ApplicationController
 
   def create
     @raeet = Raeet.new(raeet_params)
-    if @raeet.save
-      redirect_to raeets_path, notice:"Raeetしたぜぇ〜"
-    else
+    if params[:back]
       render :new
+    else
+      if @raeet.save
+        redirect_to raeets_path, notice:"Raeetしたぜぇ〜"
+      else
+        render :new
+      end
     end
   end
 
@@ -39,6 +43,7 @@ class RaeetsController < ApplicationController
     def confirm
       @raeet = Raeet.new(raeet_path)
     end
+
   end
 
   private
