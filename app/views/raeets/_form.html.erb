@@ -1,7 +1,7 @@
 <%= form_with(model: @raeet, local: true) do |form| %>
   <% if @raeet.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @raeet.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @raeet.errors.count %>件のエラーがあるぜぇ</h2>
       <ul>
       <% @raeet.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -17,4 +17,4 @@
   <%= form.submit %>
 <% end %>
 
-<%= link_to "Raeet一覧画面にもどる", raeets_path %>
+<%= link_to "Raeet一覧画面にもどるぜぇ〜", raeets_path %>

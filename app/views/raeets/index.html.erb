@@ -1,18 +1,18 @@
-<h1>Raeet一覧</h1>
+<h1>Raeet一覧だぜぇ〜</h1>
 
 <table>
   <tr>
-    <th>CONTENT</th>
+    <th>CONTENTだぜぇ〜</th>
   </tr>
 
 <% @raeets.each do |raeet| %>
   <tr>
     <td><%= raeet.content %></td>
-    <td><%= link_to '詳細', raeet_path(raeet.id) %></td>
-    <td><%= link_to '編集', edit_raeet_path(raeet.id), data: {confirm: '本当に編集するぜぇ？'} %></td>
-    <td><%= link_to '削除', raeet_path(raeet.id),method: :delete,data: { confirm: '本当に削除するぜえ？'} %> </td>
+    <td><%= link_to '詳細するぜぇ', raeet_path(raeet.id) %></td>
+    <td><%= link_to '編集するぜぇ', edit_raeet_path(raeet.id), data: {confirm: '本当に編集するぜぇ？'} %></td>
+    <td><%= link_to '削除するぜぇ', raeet_path(raeet.id),method: :delete,data: { confirm: '本当に削除するぜえ？'} %> </td>
   </tr>
 <% end %>
 </table>
 <br>
-<%= link_to 'Raeetするぜぇ',new_raeet_path %>
+<%= link_to 'Raeetするぜぇ〜',new_raeet_path %>
