@@ -26,7 +26,7 @@ class RaeetsController < ApplicationController
 
   def update
     if @raeet.update(raeet_params)
-      redirect_to raeets_path, notice: "Raeetしたぜぇ〜"
+      redirect_to raeets_path, notice: "ReRaeetしたぜぇ〜"
     else
       render :edit
     end
