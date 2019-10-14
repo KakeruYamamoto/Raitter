@@ -42,6 +42,7 @@ class RaeetsController < ApplicationController
 
     def confirm
       @raeet = Raeet.new(raeet_path)
+      render :new if @raeet.invalid?
     end
 
   end
