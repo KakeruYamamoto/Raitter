@@ -1,17 +1,3 @@
-<%= form_with(model: @raeet, local: true) do |form| %>
-  <% if @raeet.errors.any? %>
-    <div class="error_explanation">
-      <h2><%= @raeet.errors.count %>件のエラーがあります。</h2>
-      <ul>
-        <% @raeet.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-    <% end %>
-  <div class="raeet_content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit %>
-<% end %>
+<h2>Raeetする</h2>
+
+  <%= render 'form' %>
