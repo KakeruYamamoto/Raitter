@@ -8,9 +8,9 @@
 <% @raeets.each do |raeet| %>
   <tr>
     <td><%= raeet.content %></td>
-    <td><%= link_to '詳細するぜぇ', raeet_path(raeet.id) %></td>
-    <td><%= link_to '編集するぜぇ', edit_raeet_path(raeet.id), data: {confirm: '本当に編集するぜぇ？'} %></td>
-    <td><%= link_to '削除するぜぇ', raeet_path(raeet.id),method: :delete,data: { confirm: '本当に削除するぜえ？'} %> </td>
+    <td><%= link_to '詳細だぜぇ', raeet_path(raeet.id) %></td>
+    <td><%= link_to '編集だぜぇ', edit_raeet_path(raeet.id), data: {confirm: '本当に編集するぜぇ？'} %></td>
+    <td><%= link_to '削除だぜぇ', raeet_path(raeet.id),method: :delete,data: { confirm: '本当に削除するぜえ？'} %> </td>
   </tr>
 <% end %>
 </table>
