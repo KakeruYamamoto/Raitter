@@ -1,7 +1,8 @@
 <h3>送信するぜぇ〜？</h3>
 
-<%= form_with(model: @raeet, local: true) do |form| %>
+<%= form_with(model: @raeet,url: raeets_path, local: true) do |form| %>
     <%= form.hidden_field :content %>
     <p>本文:<%= @raeet.content %></p>
   <%= form.submit  "登録するぜぇ" %>
+  <%= form.submit "戻るぜぇ", name: 'back'%>
 <% end %>
