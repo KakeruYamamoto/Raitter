@@ -9,12 +9,10 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="raeet_title">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+  <div class="row justify-content-center">
+    <%= form.label :content,class: "sr-only" %>
+    <%= form.text_area :content , autocomplete: "content", autocomplete: "content" ,class: "form-control",id: "exampleFormControlTextarea1",rows: "5",placeholder: "いまどうしてる？" %>
   </div>
-  <%= form.submit %>
+  <br>
+  <%= form.submit "ツイート", class: "tweet-btn_mini" %>
 <% end %>
-
-<%= link_to "もどるぜぇ", raeets_path %>

@@ -2,7 +2,8 @@ class RaeetsController < ApplicationController
   before_action :set_raeet, only: [ :show, :edit, :update, :destroy]
 
   def index
-    @raeets =  Raeet.all
+    @raeets =  Raeet.order(created_at: :desc)
+    @raeet = Raeet.new
   end
 
   def new

@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Raitter</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <header class="header">
-    <h1>Raeet一覧だぜぇ〜</h1>
-  </header>
-
   <body>
-    <%= yield %>
-
-    <footer class="footer">
-      <p>運営会社WAIRUDODARO株式会社</p>
-      <p>© 1994-2019 Copyright SUGIYAMA Corp.</p>
-    </footer>
+    <div class="container" id="wrapper">
+      <div class="contents mx-auto">
+        <nav class="navbar">
+            <%= link_to "Raitter",raeets_path  %>
+        </nav>
+        <%= yield %>
+        <footer class="footer">
+          <p>運営会社Raiter株式会社</p>
+          <p>Copyright © 2000-2020 Raiter All Rights Reserved.</p>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>

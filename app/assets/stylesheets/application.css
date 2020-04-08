@@ -1,20 +1,253 @@
-
-
- .header {
-   background-color: #000080;
-
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap/dist/css/bootstrap.min
+ *= require_tree .
+ *= require_self
+ */
+body, #wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 600px;
  }
 
- .header h1{
-   color: white
- }
+
+body {
+  padding: 0;
+  background-repeat: no-repeat;
+  margin:0 auto;
+}
+
+nav {
+  background-color: #39A2F2;
+}
+nav p {
+  color: white;
+}
+a {
+  color: white;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+/* .tweet-btn{
+  background-color: #5AA3DA;
+  color: white;
+  padding: 18px 72px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+} */
+
+.tweet-btn_mini{
+  background-color: #5AA3DA;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.tweets {
+  border-left: solid #E6ECF0 thin;
+  border-right: solid #E6ECF0 thin;
+  width: 600px;
+  margin:0 auto;
+}
 
 
+.account_name {
+  font-weight: bold;
+}
 
- .footer {
-   background-color: #000080;
- }
+.account_name_thin {
+  color: grey;
+  font-size: 14px;
+}
 
- .footer p {
-   color: white;
- }
+.top_home {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: solid #E6ECF0 thin;
+}
+
+.account_pic {
+  border-radius: 30px
+}
+
+.tweet_box {
+  padding: 10px;
+  border-top: solid #E6ECF0 thin;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tweet_box:hover {
+ background-color: #F5F8FA;
+}
+
+.top_box {
+ padding: 10px;
+}
+
+.tweet_box_gadget{
+ padding: 0 0 0 10px;
+}
+
+.gadget-pics{
+ margin: 0 60px 0 0;
+ padding: 0;
+}
+
+.tweet-btn_mini_float {
+ font-weight: bold;
+}
+
+.edit {
+ padding-top:5px;
+ vertical-align: top;
+}
+
+.edit img{
+ padding-left:6px;
+}
+
+.name_and_content{
+  padding-left: 10px;
+  vertical-align: top;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.now {
+ padding-left: 10px;
+ color: grey;
+ font-size: 25px;
+}
+
+.top_box_btn{
+ padding: 20px;
+ margin-bottom: 30px;
+}
+
+.main_tweet{
+ width:455px;
+}
+
+.form-control {
+ width: 500px;
+ font-size:20px;
+}
+raeet[content] {
+  text-align: left;
+}
+
+
+.users{
+ height: 100%;
+ background-color: #F5F8FA;
+ border-radius: 10px;
+ margin: 20px 34px 0 34px;
+ padding:10px 0 0px 0;
+}
+
+.users h2{
+ margin:0px;
+ padding:0 0 10px 20px;
+ font-size: 20px;
+}
+
+.users table{
+ text-align: left;
+ padding-left: 16px;
+}
+
+.users table {
+ line-height: 1;
+ border-top: solid #E6ECF0 thin;
+}
+
+.bold_span{
+ margin:0;
+ padding:0;
+ height:5px;
+ font-size: 16px;
+ font-weight: bold;
+}
+
+.grey_span {
+ color:grey;
+ font-size: 14px;
+ padding-top: -5px;
+}
+
+.users p{
+ margin:0 0 0 0;
+ padding:10px 0 10px 20px;
+ font-size: 16px;
+ font-weight: bold;
+ border-top: solid #E6ECF0 thin;
+}
+
+.users p:hover{
+ background-color: #EDF2F5;
+}
+
+.users div{
+ border-top: solid #E6ECF0 thin;
+}
+
+.users div:hover{
+ background-color: #EDF2F5;
+}
+
+.users td {
+ padding: 10px 10px 10px 0px;
+}
+
+.recommend_user {
+ margin:0 0 0 0;
+ padding:10px 0 10px 0px;
+ font-size: 16px;
+ font-weight: bold;
+}
+
+.more_recommend{
+ color: #5AA3DA;
+}
+
+.more_recommend:hover{
+ border-radius: 0px 0px 10px 10px;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #39A2F2;
+  color: black;
+  margin-top: auto;
+  width: 600px;
+}
+
+.footer p{
+ color: white;
+}
