@@ -4,30 +4,32 @@
       <%= render 'form' %>
     </div>
     <% @raeets.each do |raeet| %>
-    <div class="tweet_box">
-      <table>
-        <tr>
-          <td class="pic">
-            <%= image_tag "my_page_default_img1.png", size: '50x50', class: "account_pic" %>
-          </td>
-          <td class="name_and_content">
-            <span class="account_name">名無しさん</span>
-            <span class="account_name_thin"><%= raeet.created_at.try(:strftime,"%Y年%m月%d日") %></span>
-            <div class="main_tweet"><%= raeet.content %></div>
-          </td>
-          <td class="edit">
-            <%= link_to edit_raeet_path(raeet.id) do %>
-              <%= image_tag "edit.png", size: '14x14' %>
-            <% end %>
-          </td>
-          <td class="edit">
-          <%= link_to raeet_path(raeet.id), method: :delete ,data: { confirm: 'ツイ〜トを削除しますか？' } do %>
-            <%= image_tag "delete.png", size: '14x14' %>
-          <% end %>
-          </td>
-        </tr>
-      </table>
-    </div>
+      <%= link_to raeet,class: "raeet_link" do %>
+        <div class="tweet_box">
+          <table>
+            <tr>
+              <td class="pic">
+                <%= image_tag "my_page_default_img1.png", size: '50x50', class: "account_pic" %>
+              </td>
+              <td class="name_and_content">
+                <span class="account_name">名無しさん</span>
+                <span class="account_name_thin"><%= raeet.created_at.try(:strftime,"%Y年%m月%d日") %></span>
+                <div class="main_tweet"><%= raeet.content %></div>
+              </td>
+              <td class="edit">
+                <%= link_to edit_raeet_path(raeet.id) do %>
+                  <%= image_tag "edit.png", size: '14x14' %>
+                <% end %>
+              </td>
+              <td class="edit">
+              <%= link_to raeet_path(raeet.id), method: :delete ,data: { confirm: 'Raeetを削除しますか？' } do %>
+                <%= image_tag "delete.png", size: '14x14' %>
+              <% end %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      <% end %>
     <% end %>
   </article>
 </div>

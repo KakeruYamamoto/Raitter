@@ -1,18 +1,28 @@
-<%= form_with(model: @raeet, local: true,url: choose_new_or_edit) do |form| %>
-  <% if @raeet.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @raeet.errors.count %>件のエラーがあるぜぇ〜</h2>
-      <ul>
-      <% @raeet.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<div class="text-center">
+  <div class="container">
+    <%= form_with(model: @raeet, local: true) do |form| %>
+      <% if @raeet.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= @raeet.errors.count %>件のエラーがあります。</h2>
+          <ul>
+          <% @raeet.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="row justify-content-center">
-    <%= form.label :content,class: "sr-only" %>
-    <%= form.text_area :content , autocomplete: "content", autocomplete: "content" ,class: "form-control",id: "exampleFormControlTextarea1",rows: "5",placeholder: "いまどうしてる？" %>
+      <div class="row justify-content-center">
+        <%= form.label :content,class: "sr-only" %>
+        <%= form.text_area :content , autocomplete: "content", autocomplete: "content" ,class: "form-control",id: "exampleFormControlTextarea1",rows: "5",placeholder: "いまどうしてる？" %>
+      </div>
+      <br>
+      <% if action_name == 'edit' %>
+        <%= form.submit "リツイート", class: "tweet-btn_mini", data: { confirm: 'この内容でよろしいですか？' } %>
+      <% else %>
+        <%= form.submit "ツイート", class: "tweet-btn_mini" , data: { confirm: 'この内容でよろしいですか？' } %>
+      <% end %>
+    <% end %>
+    <br>
+    <%= link_to "戻る" , :back %>
   </div>
-  <br>
-  <%= form.submit "ツイート", class: "tweet-btn_mini" %>
-<% end %>
+</div>

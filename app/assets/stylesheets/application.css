@@ -14,29 +14,37 @@
  *= require_tree .
  *= require_self
  */
-body, #wrapper {
+
+#wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 600px;
  }
-
 
 body {
   padding: 0;
   background-repeat: no-repeat;
   margin:0 auto;
 }
+li{
+    list-style:none;
+}
+
+ul{
+    padding:0;
+}
+
 
 nav {
-  background-color: #39A2F2;
+  background-color: #B62924;
 }
 nav p {
   color: white;
 }
-a {
-  color: white;
 
+a.Raitter_logo {
+  color: white;
+  text-decoration: none;
   &:visited {
     color: #666;
   }
@@ -46,17 +54,17 @@ a {
   }
 }
 
-/* .tweet-btn{
-  background-color: #5AA3DA;
-  color: white;
-  padding: 18px 72px;
+a.raeet_link {
+  color: black;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-} */
+  &:hover {
+    opacity: 0.7;
+    background-color: #fff;
+  }
+}
 
 .tweet-btn_mini{
-  background-color: #5AA3DA;
+  background-color: #B62924;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -79,13 +87,6 @@ a {
 .account_name_thin {
   color: grey;
   font-size: 14px;
-}
-
-.top_home {
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px;
-  border-bottom: solid #E6ECF0 thin;
 }
 
 .account_pic {
@@ -137,12 +138,6 @@ a {
   padding-bottom: 10px;
 }
 
-.now {
- padding-left: 10px;
- color: grey;
- font-size: 25px;
-}
-
 .top_box_btn{
  padding: 20px;
  margin-bottom: 30px;
@@ -160,92 +155,15 @@ raeet[content] {
   text-align: left;
 }
 
-
-.users{
- height: 100%;
- background-color: #F5F8FA;
- border-radius: 10px;
- margin: 20px 34px 0 34px;
- padding:10px 0 0px 0;
-}
-
-.users h2{
- margin:0px;
- padding:0 0 10px 20px;
- font-size: 20px;
-}
-
-.users table{
- text-align: left;
- padding-left: 16px;
-}
-
-.users table {
- line-height: 1;
- border-top: solid #E6ECF0 thin;
-}
-
-.bold_span{
- margin:0;
- padding:0;
- height:5px;
- font-size: 16px;
- font-weight: bold;
-}
-
-.grey_span {
- color:grey;
- font-size: 14px;
- padding-top: -5px;
-}
-
-.users p{
- margin:0 0 0 0;
- padding:10px 0 10px 20px;
- font-size: 16px;
- font-weight: bold;
- border-top: solid #E6ECF0 thin;
-}
-
-.users p:hover{
- background-color: #EDF2F5;
-}
-
-.users div{
- border-top: solid #E6ECF0 thin;
-}
-
-.users div:hover{
- background-color: #EDF2F5;
-}
-
-.users td {
- padding: 10px 10px 10px 0px;
-}
-
-.recommend_user {
- margin:0 0 0 0;
- padding:10px 0 10px 0px;
- font-size: 16px;
- font-weight: bold;
-}
-
-.more_recommend{
- color: #5AA3DA;
-}
-
-.more_recommend:hover{
- border-radius: 0px 0px 10px 10px;
-}
-
-.footer {
+footer.footer {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #39A2F2;
+  background-color: #B62924;
   color: black;
   margin-top: auto;
   width: 600px;
+
 }
 
 .footer p{
