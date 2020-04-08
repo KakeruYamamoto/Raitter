@@ -20,6 +20,8 @@
 4. $ yarn install
 5. $ rails db:create (データベースの生成)
 6. $ rails db:migrate （マイグレーションファイルの実行）
-7. $ rails s  
+7.  #config/initializers/locale.rb内の"I18n"の二行をコメントアウト（8.のコマンド終了後、戻す）
+8. $ rails db:seed (シードデータの生成)
+9. $ rails s  
 
 ```
