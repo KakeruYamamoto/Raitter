@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    models:
+      raeet: "レイート"
+    attributes:
+      raeet:
+        content: "内容"
