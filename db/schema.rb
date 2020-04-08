@@ -1,11 +1,11 @@
-ActiveRecord::Schema.define(version: 2019_10_13_084435) do
+# frozen_string_literal: true
 
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20_191_013_084_435) do
+  enable_extension 'plpgsql'
 
-  create_table "raeets", force: :cascade do |t|
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'raeets', force: :cascade do |t|
+    t.text 'content'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end

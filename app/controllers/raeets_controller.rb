@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class RaeetsController < ApplicationController
-  before_action :set_raeet, only: [ :show, :edit, :update, :destroy]
+  before_action :set_raeet, only: %i[show edit update destroy]
 
   def index
-    @raeets =  Raeet.order(created_at: :desc)
+    @raeets = Raeet.order(created_at: :desc)
     @raeet = Raeet.new
   end
 
@@ -16,22 +18,20 @@ class RaeetsController < ApplicationController
       render :new
     else
       if @raeet.save
-        redirect_to raeets_path, notice:"Raeetしました"
+        redirect_to raeets_path, notice: 'Raeetしました'
       else
         render :new
       end
     end
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @raeet.update(raeet_params)
-      redirect_to raeets_path, notice: "ReRaeetしました"
+      redirect_to raeets_path, notice: 'ReRaeetしました'
     else
       render :edit
     end
@@ -39,15 +39,13 @@ class RaeetsController < ApplicationController
 
   def destroy
     @raeet.destroy
-    redirect_to raeets_path, notice:"Raeetを削除しました"
+    redirect_to raeets_path, notice: 'Raeetを削除しました'
   end
 
   def confirm
     @raeet = Raeet.new(raeet_params)
     render :new if @raeet.invalid?
   end
-
-
 
   private
 
