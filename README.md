@@ -1,6 +1,6 @@
 # README
 
-# DIC課題：ツイッタークローン（Railsで作ったのでRaitter）
+# DIC課題(2/6)：ツイッタークローン（Railsで作ったのでRaitter）
 ## Heroku：https://stormy-chamber-32488.herokuapp.com/raeets
 
 ## ホーム画面
